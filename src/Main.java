@@ -1,35 +1,26 @@
-import java.util.Scanner;
-
+import java.util.Random;
 public class Main {
     public static void main() {
-        // mad libs game
-
-        Scanner scanner= new Scanner(System.in);
-        String adjective1;
-        String noun1;
-        String adjective2;
-        String verb1;
-        String adjective3;
+//  Random numbers
 
 
-        System.out.print("Enter an Adjective: ");
-        adjective1=scanner.nextLine();
-        System.out.print("Enter an Noun(Animal/person): ");
-        noun1=scanner.nextLine();
-        System.out.print("Enter an Adjective: ");
-        adjective2=scanner.nextLine();
-        System.out.print("Enter a verb ending with -ing: ");
-        verb1=scanner.nextLine();
-        System.out.print("Enter an Adjective: ");
-        adjective3=scanner.nextLine();
+        Random random=new Random();
 
-        System.out.println("Today I went to a "+ adjective1+" zoo.");
-        System.out.println("In an exhibit, I saw a "+noun1+".");
-        System.out.println(noun1+ " was "+ adjective2 + " and "+ verb1+ "!");
-        System.out.println("I was "+adjective3);
+        int number1;
+//          number=random.nextInt(); // gives a huge number
+        number1=random.nextInt(1,5+1); // will give a number between 1-5
+        System.out.println(number1);
 
-        scanner.close();
+//        random doubles
 
+        double number2= random.nextDouble();
+        System.out.println(number2);
+        // random boolean
+        boolean num3=random.nextBoolean();
+        System.out.println(num3);
+
+        if(random.nextBoolean()) System.out.println("HEADS!");
+        else System.out.println("TAILS!");
     }
 
 }
