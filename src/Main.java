@@ -2,18 +2,34 @@ import java.util.Scanner;
 
 public class Main {
     public static void main() {
-        // calculate area of a rectangle
+        // mad libs game
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner= new Scanner(System.in);
+        String adjective1;
+        String noun1;
+        String adjective2;
+        String verb1;
+        String adjective3;
 
-        System.out.print("Enter the height of the rectangle: ");
-        Double height=scanner.nextDouble();
 
-        System.out.print("Enter the width of the rectangle: ");
-        Double width=scanner.nextDouble();
+        System.out.print("Enter an Adjective: ");
+        adjective1=scanner.nextLine();
+        System.out.print("Enter an Noun(Animal/person): ");
+        noun1=scanner.nextLine();
+        System.out.print("Enter an Adjective: ");
+        adjective2=scanner.nextLine();
+        System.out.print("Enter a verb ending with -ing: ");
+        verb1=scanner.nextLine();
+        System.out.print("Enter an Adjective: ");
+        adjective3=scanner.nextLine();
 
-        System.out.println("Area: "+height*width);
+        System.out.println("Today I went to a "+ adjective1+" zoo.");
+        System.out.println("In an exhibit, I saw a "+noun1+".");
+        System.out.println(noun1+ " was "+ adjective2 + " and "+ verb1+ "!");
+        System.out.println("I was "+adjective3);
+
         scanner.close();
+
     }
 
 }
