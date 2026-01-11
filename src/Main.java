@@ -2,28 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main() {
+        // calculate area of a rectangle
 
         Scanner scanner = new Scanner(System.in);
 
-//        System.out.println("Enter your name: ");
-        System.out.print("Enter your name: ");
-//        String name=scanner.nextLine();  // takes in whole line
-        String name = scanner.next(); //takes in only one word
-        System.out.println(name);
-//        System.out.print(name);
+        System.out.print("Enter the height of the rectangle: ");
+        Double height=scanner.nextDouble();
 
-        System.out.print("Enter your age: ");
-//        scanner.nextInt();//takes in next int
-        System.out.println(scanner.nextInt());
+        System.out.print("Enter the width of the rectangle: ");
+        Double width=scanner.nextDouble();
 
-        System.out.print("Enter your GPA: ");
-        double gpa=scanner.nextDouble();
-        System.out.println("GPA: "+gpa);
-
-        // common issue is to encounter an extra newline after numbers, if u use nextInt and then nextLine, then u will encounter this,
-        // to avoid this, use scanner.nextLine() before taking input of the line
-
-
+        System.out.println("Area: "+height*width);
         scanner.close();
     }
 
