@@ -1,30 +1,23 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     static void main(String[] args) {
 
-      String [] fruits ={"apple", "banana", "coconut"};
-        System.out.println(fruits);
-        System.out.println(fruits[0]);
-        fruits[2]="pineapple";
-        System.out.println(fruits[2]);
+//      take user input into array
 
+//        String [] hooman={"Wasi", "Lia", "Kel"};
 
-        System.out.println(fruits.length);
+        String[]hooman=new String[3];
 
-        for(String fruit :fruits) {
-            System.out.println(fruit);
+        Scanner scanner=new Scanner(System.in);
+        for (int i=0;i<3;i++){
+            System.out.print("Enter the name of the hooman: ");
+            hooman[i]=scanner.nextLine();
         }
-        Arrays.sort(fruits);
-        for(String fruit :fruits) {
-            System.out.println(fruit);
-        }
-        Arrays.fill(fruits, "wasi");
-        for(String fruit :fruits) {
-            System.out.println(fruit);
-        }
-
+        for(String hoo : hooman)
+            System.out.println(hoo);
 
 
     }
