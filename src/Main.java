@@ -5,21 +5,15 @@ import java.util.Scanner;
 public class Main {
     static void main(String[] args) {
 
-//      take user input into array
+//   variable number of arguments
 
-//        String [] hooman={"Wasi", "Lia", "Kel"};
+        add(1, 2, 3, 4, 5, 6, 8);
 
-        String[] hooman = new String[3];
+    }
 
-        Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < 3; i++) {
-            System.out.print("Enter the name of the hooman: ");
-            hooman[i] = scanner.nextLine();
-        }
-        for (String hoo : hooman)
-            System.out.println(hoo);
-        scanner.close();
-
+    static void add(int... numbers) {
+        for (int num : numbers)
+            System.out.println(num);
     }
 
 }
