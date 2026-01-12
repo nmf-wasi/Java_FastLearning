@@ -1,12 +1,15 @@
 public class Main {
     static void main(String[] args) {
+// interface is like a contract, when a class implements an interff]ace, it has to override mentioned
+    Rabbit rabbit= new Rabbit();
+    rabbit.flee();
 
-//        Shape shape=new Shape();
-//    error, we can't create an obj from Shape class
-        Circle circle=new Circle(5);
+    Hawk hawk=new Hawk();
+    hawk.hunt();
 
-        circle.display();
-        System.out.println(circle.area());
+    Fish fish=new Fish();
+    fish.flee();
+    fish.hunt();
     }
 }
 
