@@ -1,29 +1,29 @@
 import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-//  PrintF
+//  Compound interest calculator
+        int principal;
+        double interestRate;
+        short year;
+        short timesCompounded;
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Principal amount: ");
+        principal=scanner.nextInt();
 
-        String name="Wasi";
-        char firstLetter='W';
-        int age=19;
-        double height=1520000.3;
-        boolean isLoser=true;
+        System.out.print("Enter interest rate in %: ");
+        interestRate=scanner.nextDouble();
+        interestRate/=100;
 
-        System.out.printf("Hello %s, %c, %d, %.2f, %b", name, firstLetter, age, height, isLoser);
+        System.out.print("Enter years: ");
+        year=scanner.nextShort();
 
-        System.out.printf("\n+%,.2f", height);
-        System.out.printf("\n% .3f", height);
-        int id1=1;
-        int id2=23;
-        int id3=456;
-        int id4=7890;
-        // setting width
-        System.out.printf("\n%4d", id1);
-        System.out.printf("\n%04d", id2);
-        System.out.printf("\n%-4d", id3);
-        System.out.printf("\n%d", id4);
+        System.out.print("Enter the # of times compounded per year: ");
+        timesCompounded=scanner.nextShort();
 
+        System.out.println("Total interest : " +principal*Math.pow((1+interestRate/timesCompounded), year));
     }
 
 }
