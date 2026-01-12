@@ -1,11 +1,12 @@
 public class Main {
     static void main(String[] args) {
 
-        Person person = new Person("NMF", "Wasi");
-        person.showName();
-        Student student = new Student("nmf", "wasi", 4.2);
-        student.showName();
-        student.showGpa();
+//        Shape shape=new Shape();
+//    error, we can't create an obj from Shape class
+        Circle circle=new Circle(5);
+
+        circle.display();
+        System.out.println(circle.area());
     }
 }
 
