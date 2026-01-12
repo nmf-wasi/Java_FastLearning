@@ -1,29 +1,22 @@
-import java.util.Random;
-import java.util.Scanner;
-
 public class Main {
-    public static void main(String[] args) {
-//  Compound interest calculator
-        int principal;
-        double interestRate;
-        short year;
-        short timesCompounded;
+    static void main(String[] args) {
+//      String methods
+    String name="Honey bunny sugar bunny ";
+        System.out.println(name.length());
+        System.out.println(name.toUpperCase());
+        System.out.println(name.toLowerCase());
+        System.out.println(name.charAt(0));
+        System.out.println(name.indexOf('W'));
+        System.out.println(name.indexOf('b'));
+        System.out.println(name.lastIndexOf('u'));
+        System.out.println(name.trim());
+        System.out.println(name.replace('y', 'i'));
+        System.out.println(name.isEmpty());
+        System.out.println(name.contains("bunn"));
+        System.out.println(name.equals("NMF Wasi"));
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter Principal amount: ");
-        principal=scanner.nextInt();
 
-        System.out.print("Enter interest rate in %: ");
-        interestRate=scanner.nextDouble();
-        interestRate/=100;
 
-        System.out.print("Enter years: ");
-        year=scanner.nextShort();
-
-        System.out.print("Enter the # of times compounded per year: ");
-        timesCompounded=scanner.nextShort();
-
-        System.out.println("Total interest : " +principal*Math.pow((1+interestRate/timesCompounded), year));
     }
 
 }
