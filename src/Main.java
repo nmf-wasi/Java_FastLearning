@@ -1,28 +1,29 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
     static void main(String[] args) {
-//  wrapper classes allow primitive vals (int char, double, bool) to be used as obj
+//  array lists only works with obj
+//        arrayList is a resizable array whereas, arrays are fixed ize
 
-//        this wraps them in obj, Dont use unless u need an obj
+        ArrayList<String> list=new ArrayList<String>();
+        list.add("Yuna");
+        list.add("Lia");
+        list.add("Wasi");
+        list.remove(0);
+        list.set(0,"Ryu");
+        System.out.println(list.get(1));;
+        list.add("Yeji");
+        list.add("Kel");
+        System.out.println(list);
 
-//        int a=123;
-
-    Integer a= new Integer(123); //wrapper class
-
-//        auto boxing:
-       Integer a1= 123; //wrapper class
-        String e="pizza";
-//        unboxing
-        int x=a;
-
-//        benefits: 1. allows access to some advanced methods, ex:
-        String s= Integer.toString(123);
-        System.out.println(s+s);//123123
+        Collections.sort(list);
+        System.out.println(list);
 
 
-        int i=Integer.parseInt("1234");
-        System.out.println(i+i);// 2468
+
     }
 }
 
