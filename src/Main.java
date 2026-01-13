@@ -5,22 +5,23 @@ import java.util.Scanner;
 
 public class Main {
     static void main(String[] args) {
-//  array lists only works with obj
-//        arrayList is a resizable array whereas, arrays are fixed ize
+//  Exceptions -> causes interruption in normal flow of the program
+//        ex: Div by 0, file not found and so on
+//        use try{risky_code}, catch{the exception}, finally {do this anyway}
 
-        ArrayList<String> list=new ArrayList<String>();
-        list.add("Yuna");
-        list.add("Lia");
-        list.add("Wasi");
-        list.remove(0);
-        list.set(0,"Ryu");
-        System.out.println(list.get(1));;
-        list.add("Yeji");
-        list.add("Kel");
-        System.out.println(list);
-
-        Collections.sort(list);
-        System.out.println(list);
+        try{
+            System.out.println(1/0);
+        }
+        catch (ArithmeticException  e){
+            System.out.println("U cant divide by 0!");
+            System.out.println(e.toString());;
+        }
+        catch (Exception e){ // not a good practice!
+            System.out.println("Something went wrong!");
+        }
+        finally {
+            System.out.println("Done!");
+        }
 
 
 
