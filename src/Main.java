@@ -2,34 +2,33 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Main {
     static void main(String[] args) {
-//      Timer = Class that schedule tasks
-//        uses: sending noti, schedule update, retitive ations
+//      Generics: A concept where u write a class, interface  or methods
+//        that is compatible for different data types
 
-//        TimerTask= Represents the class that will be executed by the timer
-//        extend timerTask class to define own task
-//        Create a subclass of TimerTask and @Override run()
+//        <T> type parameter -> placeholder that gets replaced
+//            <String> type argument: specific the type
 
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
-            int count = 3;
+        ArrayList<String> fruits=new ArrayList<>();
+        fruits.add("apple");
+        fruits.add("banana");
 
-            @Override
-            public void run() {
-                count--;
-                System.out.println("Sup!");
-                if (count <= 0) {
-                    System.out.println("Done!");
-                    timer.cancel();
-                }
-            }
-        };
-        timer.schedule(task, 500, 200);
+
+//        Box box=new Box(); //Raw use of parameterized class 'Box'
+        Box<String> box=new Box<>();
+//        box.setItem(123); // gives error cause this doesn't take int
+
+        box.setItem("Wasi"); //ook, cause it's a string
+
+
     }
+
+
 }
 
 
