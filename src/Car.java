@@ -1,4 +1,13 @@
-public class Car {
+public class Car extends Vehicle{
+    public Car() {
+        this(null, null, 0, 0, false);
+    }
+
+    @Override
+    void go() {
+        System.out.println("Car is running!");
+    }
+
     String model;
     String color;
     int year;

@@ -1,15 +1,10 @@
 public class Main {
     static void main(String[] args) {
-// interface is like a contract, when a class implements an interff]ace, it has to override mentioned
-    Rabbit rabbit= new Rabbit();
-    rabbit.flee();
-
-    Hawk hawk=new Hawk();
-    hawk.hunt();
-
-    Fish fish=new Fish();
-    fish.flee();
-    fish.hunt();
+// polymorphism means different shape of same thing, means same name methods but with different functions
+        Vehicle [] vehicles={new Car(), new Bike()};
+        for (Vehicle vehicle : vehicles){
+            vehicle.go();
+        }
     }
 }
 
