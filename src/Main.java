@@ -2,23 +2,28 @@ import java.util.Scanner;
 
 public class Main {
     static void main(String[] args) {
-// runtime polymorphism is polymorphism decided by user's choice
+// represents has a relationship
 
-//        Animal animal=new Animal(); // not possible because it's abstract clas
-// We will not instantiate it, just declare a var
+//        One obj contains another obj as part of it's sturcture, but the contained ibj can exist independently
 
-        Animal animal;
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("1. Dog or 2.Car?");
-        int choice=scanner.nextInt();
-        if(choice==1){
-            animal=new Dog();
-            animal.speak();
-        }else{
-            animal=new Cat();
-            animal.speak();
-        }
+    Book book1=new Book("idk", 95);
+    Book book2=new Book("idk either", 96);
+    Book book3=new Book("idk eitherrr", 69);
 
+//        Aggregation → coupled, but loosely
+//        Composition → tightly coupled
+//        Tight coupling = control + knowledge
+//        Loose coupling = use without ownership
+
+    Book[]books={book1, book2, book3};
+
+    for(Book book : books){
+        System.out.println(book);
+    }
+
+    Library library=new Library("idu", 2006, books);
+
+        System.out.println(library);
 
     }
 }
