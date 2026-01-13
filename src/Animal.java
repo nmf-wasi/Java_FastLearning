@@ -1,4 +1,4 @@
-public class Animal extends Organism{
+public abstract class Animal extends Organism{
     boolean isAlive;
     Animal(){isAlive=true;}
     void eat(){
@@ -7,4 +7,7 @@ public class Animal extends Organism{
     void breathe(){
         System.out.println("Breathing like an animal");
     }
+
+    abstract void speak();
+
 }
