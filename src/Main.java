@@ -1,30 +1,28 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Main {
     static void main(String[] args) {
-//  Exceptions -> causes interruption in normal flow of the program
-//        ex: Div by 0, file not found and so on
-//        use try{risky_code}, catch{the exception}, finally {do this anyway}
-
-        try{
-            System.out.println(1/0);
+//  FileWriter
+        String filepath="File.txt";
+        try(FileWriter fileWriter=new FileWriter(filepath);){
+            System.out.println("Openeded the file!");
+//            fileWriter.write("I am in!!");
+        String content= """
+                idk what to write
+                i am just passiing time
+                """;
+        fileWriter.write(content);
         }
-        catch (ArithmeticException  e){
-            System.out.println("U cant divide by 0!");
-            System.out.println(e.toString());;
+        catch (FileNotFoundException e){
+            System.out.println(e.toString());
+            System.out.println(e.getMessage());
         }
-        catch (Exception e){ // not a good practice!
-            System.out.println("Something went wrong!");
+        catch (IOException e){
+            System.out.println(e.toString());
+            e.fillInStackTrace();
         }
-        finally {
-            System.out.println("Done!");
-        }
-
-
-
     }
 }
 
