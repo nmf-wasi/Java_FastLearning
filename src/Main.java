@@ -1,15 +1,27 @@
+import java.util.HashMap;
+
 public class Main {
     static void main(String[] args) {
-//      Generics: A concept where u write a class, interface  or methods
-//        that is compatible for different data types
+//      hashmap : <key, val> pair -> keys are unique, first one is key
 
-//        <T> type parameter -> placeholder that gets replaced
-//            <String> type argument: specific the type
+        HashMap<String, Double> map = new HashMap<>();
+        map.put("wasi", 0.05);
+        map.put("kel", 9999.99);
+        System.out.println(map);
+        map.put("kel", 999.99);
 
-        Product<String, Double> product1 = new Product<>("wasi", 0.01);
-        Product<String, Integer> product2 = new Product<>("wasi", 12);
-        System.out.println(product1);
-        System.out.println(product2);
+        for (String key : map.keySet()) {
+            System.out.println(key + " : " + map.get(key));
+        }
+
+        System.out.println(map.containsKey("wasi"));
+        System.out.println(map);
+        map.remove("wasi");
+        System.out.println(map);
+        System.out.println(map.get("kel"));
+        System.out.println(map.containsKey("wasi"));
+        System.out.println(map.containsValue("125"));
+        System.out.println(map.size());
 
     }
 }
