@@ -2,31 +2,33 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Main {
     static void main(String[] args) {
-//  anynomous class
+//      Timer = Class that schedule tasks
+//        uses: sending noti, schedule update, retitive ations
 
-        Dog dog=new Dog();
-        dog.speak();
+//        TimerTask= Represents the class that will be executed by the timer
+//        extend timerTask class to define own task
+//        Create a subclass of TimerTask and @Override run()
 
-//        Suppose we have a talking dog, scooby do
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask() {
+            int count = 3;
 
-    TalkingDog talkingDog=new TalkingDog();
-    talkingDog.speak();
-
-//    just for one extra func, we have to create a whole new class
-
-//     now lets use annynomous class
-
-        Dog dog2=new Dog(){
-          @Override
-          void speak(){
-              System.out.println("This dog speaks!");
-          }
+            @Override
+            public void run() {
+                count--;
+                System.out.println("Sup!");
+                if (count <= 0) {
+                    System.out.println("Done!");
+                    timer.cancel();
+                }
+            }
         };
-        dog2.speak();
-
+        timer.schedule(task, 500, 200);
     }
 }
 
