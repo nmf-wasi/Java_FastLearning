@@ -5,29 +5,27 @@ import java.io.IOException;
 
 public class Main {
     static void main(String[] args) {
-// FileReader with BufferReader
-        String filePath = "file.txt";
+//  anynomous class
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            while ((line=reader.readLine()) !=null){
-                System.out.println(line);
-            }
-        }
-        // buffer reader doesn't work alone
-//        it require u to pass a file reader obj to it
+        Dog dog=new Dog();
+        dog.speak();
 
-        catch (FileNotFoundException e){
-            System.out.println(e.getMessage());
-            System.out.println(e.toString());
-        }
-        catch (IOException e){
-            System.out.println("Something went wrong!");
-        }
-        finally {
-            System.out.println("Done!");
-        }
+//        Suppose we have a talking dog, scooby do
 
+    TalkingDog talkingDog=new TalkingDog();
+    talkingDog.speak();
+
+//    just for one extra func, we have to create a whole new class
+
+//     now lets use annynomous class
+
+        Dog dog2=new Dog(){
+          @Override
+          void speak(){
+              System.out.println("This dog speaks!");
+          }
+        };
+        dog2.speak();
 
     }
 }
