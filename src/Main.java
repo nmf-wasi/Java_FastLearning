@@ -2,29 +2,27 @@ import java.util.Scanner;
 
 public class Main {
     static void main(String[] args) {
-// represents has a relationship
+//  wrapper classes allow primitive vals (int char, double, bool) to be used as obj
 
-//        One obj contains another obj as part of it's sturcture, but the contained ibj can exist independently
+//        this wraps them in obj, Dont use unless u need an obj
 
-    Book book1=new Book("idk", 95);
-    Book book2=new Book("idk either", 96);
-    Book book3=new Book("idk eitherrr", 69);
+//        int a=123;
 
-//        Aggregation → coupled, but loosely
-//        Composition → tightly coupled
-//        Tight coupling = control + knowledge
-//        Loose coupling = use without ownership
+    Integer a= new Integer(123); //wrapper class
 
-    Book[]books={book1, book2, book3};
+//        auto boxing:
+       Integer a1= 123; //wrapper class
+        String e="pizza";
+//        unboxing
+        int x=a;
 
-    for(Book book : books){
-        System.out.println(book);
-    }
+//        benefits: 1. allows access to some advanced methods, ex:
+        String s= Integer.toString(123);
+        System.out.println(s+s);//123123
 
-    Library library=new Library("idu", 2006, books);
 
-        System.out.println(library);
-
+        int i=Integer.parseInt("1234");
+        System.out.println(i+i);// 2468
     }
 }
 
